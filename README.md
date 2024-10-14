@@ -50,6 +50,6 @@ Can remove n^5 so it is easier.
 
 With this being shorten we can determine a sum 
 
-= 3^i _T_((n)/(3^i) + \epsilon 
+= 3^i _T_((n)/(3^i) + /eplison
 
 
