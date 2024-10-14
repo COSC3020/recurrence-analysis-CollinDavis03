@@ -30,3 +30,26 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+Answer: 
+Let's go down the code and list everything we see. 
+
+if _n_ <= 1 
+
+3_T_(n/3) + n^5 else 
+
+To find the complexity, we need to isolate it more. 
+
+_T_(n) = 3_T_(n/3) + n^5
+= 3(3_T_((n/3)/3) + (n/3)^5) + n^5
+= 9_T_(n/3) + (3n^5)/(3^5) + n^5
+
+Can remove n^5 so it is easier. 
+
+9_T_(n/3) + (3)/(3^5) * n^5 + n^5
+
+With this being shorten we can determine a sum 
+
+= 3^i _T_((n)/(3^i) + \epsilon 
+
+
