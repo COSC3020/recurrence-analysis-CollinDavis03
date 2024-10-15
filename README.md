@@ -34,7 +34,7 @@ might help with the notation for mathematical expressions.
 Answer: 
 Let's go down the code and list everything we see. 
 
-if _n_ <= 1 
+if $n \leq 1$ 
 
 3_T_(n/3) + $`n^5`$ else 
 
