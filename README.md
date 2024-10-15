@@ -42,16 +42,18 @@ To find the complexity, we need to isolate it more.
 
 _T_(n) = $3T(\frac{n}{3}) + n^5$
 
-= 3(3_T_((n/3)/3) + $`(n/3)^5`$) + $`n^5`$
+= 3(3T(\frac{\frac{n}{3}}{3}) + (\frac{n}{3})^5) + n^5$
 
-= 9_T_(n/3) + $`(3n^5)`$/$`(3^5)`$ + $`n^5`$
+= 9T(\frac{n}{3}) + \frac{3n^5}{3^5} + n^5$
 
 Can remove $`n^5`$ so it is easier. 
 
-9_T_(n/3) + (3)/$`(3^5)`$ * $`n^5`$ + $`n^5`$
+= 9T(\frac{n}{3}) + \frac{3}{3^5} \cdot n^5 + n^5$
 
-With this being shorten we can determine a sum 
+With this being shortened we can determine a sum 
 
-= $`\3^{_i_}`$
+= 3^iT(\frac{n}{3^i}) + \displaystyle\sum_{j=0}^{i-1}\frac{3^j}{(3^j)^5} \cdot n^5$ 
+
+
 
 
