@@ -54,6 +54,24 @@ With this being shortened we can determine a sum
 
 $= 3^iT(\frac{n}{3^i}) + \displaystyle\sum_{j=0}^{i-1}\frac{3^j}{(3^j)^5} \cdot n^5$ 
 
+I will use $i = \log_3(n)$ for substitution 
+
+$= 3^{\log_3(n)}T(\frac{n}{3^{\log_3(n)}}) + \displaystyle\sum_{j=0}^{\log_3(n)-1}\frac{3^j}{(3^j)^5} \cdot n^5$
+
+Simplify this so that _k_ is the constant. 
+
+$= n + \displaystyle\sum_{j=0}^{\log_3(n)-1}k \cdot n^5$
+
+From this sum, we can determine that there is a logarithmic number of elements multiplied by $n^5$, therefore we know that $T(n) \in \Theta(n^5 \cdot \log_3(n))$
+
+Sources: 
+I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. 
+
+Plagiarism Statement: 
+“I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
+
+
+
 
 
 
