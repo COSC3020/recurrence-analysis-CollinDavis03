@@ -36,7 +36,7 @@ Let's go down the code and list everything we see.
 
 if _n_ <= 1 
 
-3_T_(n/3) + $`n^5`$ else 
+$`\3_T_(n/3) + n^5$ else 
 
 To find the complexity, we need to isolate it more. 
 
@@ -50,6 +50,6 @@ Can remove n^5 so it is easier.
 
 With this being shorten we can determine a sum 
 
-= $3^_i_$
+= 3^_i_
 
 
