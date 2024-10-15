@@ -36,7 +36,7 @@ Let's go down the code and list everything we see.
 
 if _n_ <= 1 
 
-3_T_(n/3) + n^5`$ else 
+$3_T_(n/3) + n^5$ else 
 
 To find the complexity, we need to isolate it more. 
 
