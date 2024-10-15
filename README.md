@@ -41,10 +41,12 @@ if _n_ <= 1
 To find the complexity, we need to isolate it more. 
 
 _T_(n) = 3_T_(n/3) + $`n^5`$
+
 = 3(3_T_((n/3)/3) + $`(n/3)^5`$) + $`n^5`$
+
 = 9_T_(n/3) + $`(3n^5)`$/$`(3^5)`$ + $`n^5`$
 
-Can remove n^5 so it is easier. 
+Can remove $`n^5`$ so it is easier. 
 
 9_T_(n/3) + (3)/$`(3^5)`$ * $`n^5`$ + $`n^5`$
 
