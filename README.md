@@ -58,7 +58,7 @@ I will use $i = \log_3(n)$ for substitution
 
 $= 3^{\log_3(n)}T(\frac{n}{3^{\log_3(n)}}) + \displaystyle\sum_{j=0}^{\log_3(n)-1}\frac{3^j}{(3^j)^5} \cdot n^5$
 
-Simplify this so that _k_ is the constant. 
+Simplify the first half of the function. Our sum can be simplified as followed, This is where _k_ is constant.
 
 $= n + \displaystyle\sum_{j=0}^{\log_3(n)-1}k \cdot n^5$
 
