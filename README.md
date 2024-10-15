@@ -52,6 +52,6 @@ Can remove $`n^5`$ so it is easier.
 
 With this being shorten we can determine a sum 
 
-= $`3^{_i_}`$
+= $`\3^{_i_}`$
 
 
