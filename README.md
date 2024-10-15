@@ -40,7 +40,7 @@ $3T(\frac{n}{3}) + n^5$ else
 
 To find the complexity, we need to isolate it more. 
 
-_T_(n) = 3_T_(n/3) + $`n^5`$
+_T_(n) = $3T(\frac{n}{3}) + n^5$
 
 = 3(3_T_((n/3)/3) + $`(n/3)^5`$) + $`n^5`$
 
