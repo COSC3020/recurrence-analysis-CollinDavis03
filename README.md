@@ -69,7 +69,7 @@ $\sum_{j=0}^{i-1} (\frac{n^5}{3^(4j)})$ = $n^5 \sum_{j=0}^{i-1} (\frac{1}{3^4})^
 
 For the large n, the term (1/(3^4))^i becomes very small, so the sum would simplify to:
 
-$n^5 * ((\frac{1}{1 - (\frac{1}{3^4})})) = _K_ * n^5$
+$n^5 * ((\frac{1}{1 - (\frac{1}{3^4})}))$ = _K_ * $n^5$
 
 Where K is a constant derived from the sum. 
 
