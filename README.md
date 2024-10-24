@@ -73,12 +73,26 @@ $n^5 * ((\frac{1}{1 - (\frac{1}{3^4})}))$ = _K_ * $n^5$
 
 Where K is a constant derived from the sum. 
 
+**Substitute back into the recurrence:**
 
+T(n) = $3^i T(\frac{n}{3^k}) + K * n^5$
 
+**Base case substitution** 
 
+We set $i = \log_3{n}$ to reach base case of T(1) 
 
+T(n) = $ n * T(1) + K * n^5\log_3{n}$
+
+It would simplify down to 
+
+T(n) = &Theta(n) + Theta(n^5)$ 
+
+This would simplify down too 
+
+ $T(n) \in O(n^5)$ 
+ 
 Sources: 
-I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. 
+I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. I used AI(ChatGPT) to explain the k constant and how I should apply it to the work and I redid all the work from the start and checked with AI after to make sure I did it right and I did everything correctly. 
 
 Plagiarism Statement: 
 “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
