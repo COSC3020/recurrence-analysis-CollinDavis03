@@ -87,7 +87,7 @@ It would simplify down to
 
 T(n) = $O(n) + O(n^5)$ 
 
-This would simplify down too 
+This would simplify too. The reason is because $O(n)$ is equivalent to $T(n)$
 
  $T(n) \in O(n^5)$ 
  
