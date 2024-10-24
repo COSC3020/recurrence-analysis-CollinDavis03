@@ -92,7 +92,7 @@ This would simplify too. The reason is because $O(n)$ is equivalent to $T(n)$
  $T(n) \in O(n^5)$ 
  
 Sources: 
-I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. I used AI(ChatGPT) to explain the k constant and how I should apply it to the work and I redid all the work from the start and checked with AI after to make sure I did it right and I did everything correctly. 
+I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. I looked back at Nolan's repo and followed how he did it but in my own way.  
 
 Plagiarism Statement: 
 “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
