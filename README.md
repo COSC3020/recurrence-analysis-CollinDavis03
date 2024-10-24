@@ -85,7 +85,7 @@ T(n) = $ n * T(1) + K * n^5\log_3{n}$
 
 It would simplify down to 
 
-T(n) = $Theta(n) + Theta(n^5)$ 
+T(n) = $O(n) + O(n^5)$ 
 
 This would simplify down too 
 
