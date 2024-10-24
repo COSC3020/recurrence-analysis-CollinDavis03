@@ -32,38 +32,39 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 Answer: 
-Let's go down the code and list everything we see. 
+**I am starting this over and from a different approach**
 
-if $n \leq 1$ 
+$T(n) = 1, \text{ if } n \leq 1$
+   
+$T(n) = 3T\left(\frac{n}{3}\right) + n^5, \text{ when } n > 1$
 
-$3T(\frac{n}{3}) + n^5$ else 
+**Expand the Recurrence and understand the pattern:**
 
-To find the complexity, we need to isolate it more. 
+$T(n) = 3T\left(\frac{n}{3}\right) + n^5$
 
-_T_(n) = $3T(\frac{n}{3}) + n^5$
+$= 3\left(3T\left(\frac{n}{9}\right) + \left(\frac{n}{3}\right)^5\right) + n^5$
 
-$= 3(3T(\frac{\frac{n}{3}}{3}) + (\frac{n}{3})^5) + n^5$
+$= 9T\left(\frac{n}{9}\right) + 3\left(\frac{n^5}{3^5}\right) + n^5$
 
-$= 9T(\frac{n}{3}) + \frac{3n^5}{3^5} + n^5$
+$= 9T\left(\frac{n}{9}\right) + \frac{n^5}{3^4} + n^5$
 
-Can remove $`n^5`$ so it is easier. 
+**Which will lead us to the substitution**
 
-$= 9T(\frac{n}{3}) + \frac{3}{3^5} \cdot n^5 + n^5$
+$= 3^i T\left(\frac{n}{3^i}\right) + \sum_{j=0}^{i-1} 3^j \left(\frac{n}{3^j}\right)^5$
 
-With this being shortened we can determine a sum 
+_i_ represents the number of times we apply the recurrence. 
 
-$= 3^iT(\frac{n}{3^i}) + \displaystyle\sum_{j=0}^{i-1}\frac{3^j}{(3^j)^5} \cdot n^5$ 
+**Simplify the Summation Term:** 
 
-I will use $i = \log_3(n)$ for substitution 
+$\sum_{j=0}^{i-1} \left(\frac{n^5}{3^4j}\right)$
 
-$= 3^{\log_3(n)}T(\frac{n}{3^{\log_3(n)}}) + \displaystyle\sum_{j=0}^{\log_3(n)-1}\frac{3^j}{(3^j)^5} \cdot n^5$
+This also can be simplfied to $ r = (\frac{1}{3^4})$
 
-Simplify the first half of the function. Our sum can be simplified as followed, This is where _k_ is constant.
+**Evaluate the Geometric Series:** 
 
-$= n + \displaystyle\sum_{j=0}^{\log_3(n)-1}k \cdot n^5$
+The sum of the geometric series $\sum_{j=0}^{i-1} r^j$ where r < 1 is: 
 
-From this sum, we can determine that there is a logarithmic number of elements multiplied by $n^5$, therefore we know that $T(n) \in \Theta(n^5 \cdot \log_3(n))$
-
+$\sum_{j=0}^{i-1} (\frac{n^5}{3^4j}) = n^5 \sum_{j=0}^{i-1} (\frac{1}{3^4})^j = n^5 * (\frac{1 - (\frac{1}{3^4})^k)}{1 - (\frac{1}{3^4})}})$
 Sources: 
 I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. 
 
