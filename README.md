@@ -64,7 +64,8 @@ This also can be simplfied to $ r = (\frac{1}{3^4})$
 
 The sum of the geometric series $\sum_{j=0}^{i-1} r^j$ where r < 1 is: 
 
-$\sum_{j=0}^{i-1} (\frac{n^5}{3^(4j)})$ = $n^5 \sum_{j=0}^{i-1} (\frac{1}{3^4})^j$ = $n^5 * (\frac{1 - (\frac{1}{3^4})^k)}{1 - (\frac{1}{3^4})}})$
+$\sum_{j=0}^{i-1} (\frac{n^5}{3^(4j)})$ = $n^5 \sum_{j=0}^{i-1} (\frac{1}{3^4})^j$ 
+= $n^5 * (\frac{1 - (\frac{1}{3^4})^k))}{1 - (\frac{1}{3^4})})$
 Sources: 
 I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to Git Hub. I also looked back at the slides in class to assist me with this. 
 
