@@ -30,3 +30,75 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+Answer: 
+**I am starting this over and from a different approach**
+
+$T(n) = 1, \text{ if } n \leq 1$
+   
+$T(n) = 3T\left(\frac{n}{3}\right) + n^5, \text{ when } n > 1$
+
+**Expand the Recurrence and understand the pattern:**
+
+$T(n) = 3T\left(\frac{n}{3}\right) + n^5$
+
+$= 3\left(3T\left(\frac{n}{9}\right) + \left(\frac{n}{3}\right)^5\right) + n^5$
+
+$= 9T\left(\frac{n}{9}\right) + 3\left(\frac{n^5}{3^5}\right) + n^5$
+
+$= 9T\left(\frac{n}{9}\right) + \frac{n^5}{3^4} + n^5$
+
+**Which will lead us to the substitution**
+
+$= 3^i T\left(\frac{n}{3^i}\right) + \sum_{j=0}^{i-1} 3^j \left(\frac{n}{3^j}\right)^5$
+
+_i_ represents the number of times we apply the recurrence. 
+
+**Simplify the Summation Term:** 
+
+$\sum_{j=0}^{i-1} \left(\frac{n^5}{3^4j}\right)$
+
+This also can be simplfied to $ r = (\frac{1}{3^4})$
+
+**Evaluate the Geometric Series:** 
+
+The sum of the geometric series $\sum_{j=0}^{i-1} r^j$ where r < 1 is: 
+
+$\sum_{j=0}^{i-1} (\frac{n^5}{3^(4j)})$ = $n^5 \sum_{j=0}^{i-1} (\frac{1}{3^4})^j$ 
+= $n^5 * (\frac{1 - (\frac{1}{3^4})^k))}{1 - (\frac{1}{3^4})})$
+
+For the large n, the term (1/(3^4))^i becomes very small, so the sum would simplify to:
+
+$n^5 * ((\frac{1}{1 - (\frac{1}{3^4})}))$ = _K_ * $n^5$
+
+Where K is a constant derived from the sum. 
+
+**Substitute back into the recurrence:**
+
+T(n) = $3^i T(\frac{n}{3^k}) + K * n^5$
+
+**Base case substitution** 
+
+We set $i = \log_3{n}$ to reach base case of T(1) 
+
+T(n) = $ n * T(1) + K * n^5\log_3{n}$
+
+It would simplify down to 
+
+T(n) = $O(n) + O(n^5)$ 
+
+This would simplify too. The reason is because $O(n)$ is equivalent to $T(n)$
+
+ $T(n) \in O(n^5)$ 
+ 
+Sources: 
+I looked at Nolan Berg's raw repo for this so that I could write all the functions down. I did most of the work on my iPad and was having a hard time transferring it over to GitHub. I also looked back at the slides in class to assist me with this. I looked back at Nolan's repo and followed how he did it but in my way. I only followed up on the first substitution in his repo and did the rest on my own the rest of the way. I plugged in what I had done on my iPad into ChatGPT to make sure I did my work right and nothing was missing or wrong with it. I gave me nothing, so if something is wrong I will be coming to office hours. 
+
+Plagiarism Statement: 
+“I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
+
+
+
+
+
+
